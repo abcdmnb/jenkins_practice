@@ -18,7 +18,7 @@ pipeline{
   }
   stage ("running_py_code"){
    steps{
-    bat 'C:\Users\HP\AppData\Local\Programs\Python\Python310\python.exe test.py'
+    bat 'py test.py'
    }
   }
 }
