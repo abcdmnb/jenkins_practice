@@ -16,5 +16,10 @@ pipeline{
    echo "deploying..."
   }
  }
+stage ("running_py_code"){
+ steps{
+  py test.py
+ }
+}
 }
 }
