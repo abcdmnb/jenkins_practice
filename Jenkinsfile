@@ -18,7 +18,7 @@ pipeline{
   }
   stage ("running_py_code"){
    steps{
-    bat 'py test.py'
+    bat 'python test.py'
    }
   }
 }
