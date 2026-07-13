@@ -11,15 +11,15 @@ pipeline{
    echo "testing..."
    }
    }
- stage ("deploy_stage"){
-  steps{
-   echo "deploying..."
+  stage ("deploy_stage"){
+   steps{
+    echo "deploying..."
   }
- }
-stage ("running_py_code"){
- steps{
-  py test.py
- }
-}
+  }
+  stage ("running_py_code"){
+   steps{
+    py test.py
+   }
+  }
 }
 }
