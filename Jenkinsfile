@@ -24,10 +24,14 @@ pipeline{
 }
  post{
   success{
-   echo "job is successful"
+   mail to: "bhagya17211@gmail.com"
+        subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}"
+        body: "Build completed successfully.\n${env.BUILD_URL}"
   }
   failure{
-   echo "fob failed"
+   mail to: "bhagya17211@gmail.com"
+        subject: "FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}"
+        body: "Build failed.\n${env.BUILD_URL}"
   }
  }
 }
