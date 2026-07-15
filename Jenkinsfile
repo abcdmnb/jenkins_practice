@@ -22,4 +22,12 @@ pipeline{
    }
   }
 }
+ post{
+  success{
+   echo "job is successful"
+  }
+  failure{
+   echo "fob failed"
+  }
+ }
 }
