@@ -3,6 +3,7 @@ pipeline{
  parameters{
   string(
    name: 'Name',
+   Value: 'Bhagya',
    defaultValue: 'bhagya',
    description: 'enter your name'
   )
