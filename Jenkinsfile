@@ -10,11 +10,7 @@ pipeline{
   )
   choice(
    name: 'age',
-   choices: [
-    25
-    26
-    27
-   ],
+   choices: [ '25','26','27' ],
    description: 'select your age'
   )
  }
