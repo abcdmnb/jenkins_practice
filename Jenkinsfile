@@ -17,13 +17,13 @@ pipeline{
  stages{
   stage ("display_running_machine_name"){
    steps{
-    hostname
+    sh 'hostname'
    }
   }
   stage ("display_parameters"){
    steps{
-    echo "entered name is $name"
-    echo "entered age is $age"
+    echo "entered name is $params.name"
+    echo "entered age is $params.age"
    }
   }
   stage ("Build_stage"){
