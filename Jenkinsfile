@@ -23,6 +23,11 @@ pipeline{
   }
 }
  post{
+  always{
+      mail to: "bhagya17211@gmail.com",
+        subject: "Job: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+        body: "job runned successfully.\n${env.BUILD_URL}"
+  }
   success{
    mail to: "bhagya17211@gmail.com",
         subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
