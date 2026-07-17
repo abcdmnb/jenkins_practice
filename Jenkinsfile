@@ -3,7 +3,7 @@ pipeline{
  parameters{
   string(
    name: 'Name',
-   Value: 'Bhagya',
+#   Value: 'Bhagya',
    defaultValue: 'bhagya',
    description: 'enter your name'
   )
@@ -21,7 +21,7 @@ pipeline{
   // }
   stage ("display_parameters"){
    steps{
-    echo "entered name is ${params.name}"
+    echo "entered name is ${params.Name}"
     echo "entered age is ${params.age}"
    }
   }
