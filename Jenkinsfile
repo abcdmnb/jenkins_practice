@@ -1,7 +1,5 @@
 pipeline{
- agent{
-  label 'slavenode1'
- }
+ agent any
  parameters{
   string(
    name: 'Name',
@@ -15,15 +13,15 @@ pipeline{
   )
  }
  stages{
-  stage ("display_running_machine_name"){
-   steps{
-    sh 'hostname'
-   }
-  }
+  // stage ("display_running_machine_name"){
+  //  steps{
+  //   sh 'hostname'
+  //  }
+  // }
   stage ("display_parameters"){
    steps{
-    echo "entered name is $params.name"
-    echo "entered age is $params.age"
+    echo "entered name is ${params.name}"
+    echo "entered age is ${params.age}"
    }
   }
   stage ("Build_stage"){
