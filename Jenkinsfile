@@ -1,6 +1,35 @@
 pipeline{
- agent any
+ agent{
+  label 'slavenode1'
+ }
+ parameters{
+  string(
+   name: 'Name',
+   defaultValue: '',
+   description: 'enter your name'
+  )
+  choice(
+   name: 'age',
+   choices: [
+    25
+    26
+    27
+   ],
+   description: 'select your age'
+  )
+ }
  stages{
+  stage ("display_running_machine_name"){
+   steps{
+    hostanme
+   }
+  }
+  stage ("display_parameters"){
+   steps{
+    echo "entered name is $name"
+    echo "entered age is $age"
+   }
+  }
   stage ("Build_stage"){
    steps{
     echo "building"
@@ -23,11 +52,11 @@ pipeline{
   }
 }
  post{
-  always{
-      mail to: "bhagya17211@gmail.com",
-        subject: "Job: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-        body: "job runned successfully.\n${env.BUILD_URL}"
-  }
+  // always{
+  //     mail to: "bhagya17211@gmail.com",
+  //       subject: "Job: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+  //       body: "job runned successfully.\n${env.BUILD_URL}"
+  // }
   success{
    mail to: "bhagya17211@gmail.com",
         subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
