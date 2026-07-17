@@ -17,7 +17,7 @@ pipeline{
  stages{
   stage ("display_running_machine_name"){
    steps{
-    hostanme
+    hostname
    }
   }
   stage ("display_parameters"){
