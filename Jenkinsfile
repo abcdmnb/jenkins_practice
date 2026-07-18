@@ -39,6 +39,11 @@ pipeline{
     echo "deploying..."
   }
   }
+  stage ("multibranchtesting"){
+   steps{
+    echo "multibranch testing"
+  }
+  }
   stage ("running_py_code"){
    steps{
     bat '"C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" test.py'
