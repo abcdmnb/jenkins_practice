@@ -46,7 +46,7 @@ pipeline{
   }
    stage("future_branch"){
     steps{
-     echo "message from future branch"
+     echo "message from future branch. second time for testing purpose"
    }
   }
 }
