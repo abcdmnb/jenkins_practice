@@ -51,7 +51,7 @@ pipeline{
   }
    stage("future_branch2"){
     steps{
-     echo "message from future branc2. hello from 2nd future branchh. second time"
+     echo "message from future branc2. hello from 2nd future branchh. thied time time"
    }
   }
 }
