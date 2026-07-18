@@ -41,7 +41,7 @@ pipeline{
   }
   stage ("multibranchtesting"){
    steps{
-    echo "multibranch testing"
+    echo "multibranch testing for webhook integration"
   }
   }
   stage ("running_py_code"){
