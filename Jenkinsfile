@@ -49,6 +49,11 @@ pipeline{
      echo "message from future branch"
    }
   }
+   stage("future_branch2"){
+    steps{
+     echo "message from future branc2. hello from 2nd future branchh"
+   }
+  }
 }
  // post{
  //  // always{
