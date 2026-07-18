@@ -43,6 +43,11 @@ pipeline{
    steps{
     bat '"C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" test.py'
    }
+   stage("future_branch"){
+    steps{
+     echo "message from future branch"
+    }
+   }
   }
 }
  // post{
